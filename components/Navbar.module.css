@@ -38,3 +38,23 @@
 .light_mode:hover {
   background-color: #f7c548;
 }
+.mobile_mode {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: #cbd5e0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #202023;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+  cursor: pointer;
+  border: 1px solid #333;
+  opacity: 0;
+}
+@media (max-width: 770px) {
+  .mobile_mode {
+    opacity: 1;
+  }
+}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { BsSun } from "react-icons/bs";
+import { BiMenu } from "react-icons/bi";
 import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (
@@ -23,14 +24,18 @@ const Navbar = () => {
       <div className={styles.light_mode}>
         <BsSun />
       </div>
+      <div className={styles.mobile_mode}>
+        <BiMenu />
+      </div>
       <style jsx>{`
         .container {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          width: 50vw;
+          width: 60vw;
           margin: 0 auto;
           margin-top: 1rem;
+          min-width: 500px;
         }
         .social {
           flex: 1;
