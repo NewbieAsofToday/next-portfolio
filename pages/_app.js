@@ -1,13 +1,9 @@
-import Layout from "../components/Layout";
-import "../styles/globals.css";
-import { ColorModeScript } from "@chakra-ui/react";
-import theme from "../components/theme";
-
-function MyApp({ Component, pageProps }) {
+// import "../styles/globals.css";
+import Layout from "../components/layout/Layout";
+function MyApp({ Component, pageProps, router }) {
   return (
     <Layout>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <Component {...pageProps} />
+      <Component {...pageProps} key={router.route} />
     </Layout>
   );
 }
