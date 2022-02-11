@@ -3,27 +3,45 @@ import { AiFillGithub } from "react-icons/ai";
 import { BsSun } from "react-icons/bs";
 import { BiMenu } from "react-icons/bi";
 import styles from "./Navbar.module.css";
+import { motion } from "framer-motion";
+
 const Navbar = () => {
   return (
     <nav className='container'>
-      <div className={styles.logo}>Euger Bonete</div>
+      <motion.div className={styles.logo}>
+        <Link href={"/"}>Euger Bonete</Link>
+        <motion.span animate={{ fontSize: "1.5rem" }}>
+          <Link href={"/"}>👋</Link>
+        </motion.span>
+      </motion.div>
       <div className={styles.nav_links}>
-        <Link href={""}>
-          <a className={styles.nav_link}>About </a>
-        </Link>
-        <Link href={""}>
+        <Link href={"/project-page"}>
           <a className={styles.nav_link}>Projects</a>
+        </Link>
+        <Link href={"/about"}>
+          <a className={styles.nav_link}>About </a>
         </Link>
       </div>
       <div className='social'>
-        <div className={styles.social_icon}>
-          <AiFillGithub />
-          Github
-        </div>
+        <motion.div
+          animate={{ fontSize: "1rem" }}
+          className={styles.social_icon}
+        >
+          <AiFillGithub
+            style={{ fontSize: "1.9rem" }}
+            className={styles.wave}
+          />
+          {/* Github */}
+        </motion.div>
       </div>
-      <div className={styles.light_mode}>
+      <motion.div
+        initial={{ x: 300 }}
+        transition={{ duration: 0.1 }}
+        animate={{ x: 0 }}
+        className={styles.light_mode}
+      >
         <BsSun />
-      </div>
+      </motion.div>
       <div className={styles.mobile_mode}>
         <BiMenu />
       </div>
