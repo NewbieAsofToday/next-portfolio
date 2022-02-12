@@ -1,5 +1,6 @@
+/* ----------------------container */
+
 .container {
-  background-color: red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,8 +10,121 @@
   min-width: 300px;
   position: relative;
 }
-.mobile {
+/* ----------------------logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.logo p {
+  min-width: 50px;
+  display: block;
+}
+/* ----------------------links */
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+}
+.links p {
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.4s;
+}
+.links p:hover {
+  transform: translateY(-3px);
+  text-decoration: underline;
+}
+
+/* ----------------------social */
+
+.socials {
+  flex: 1;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.4s;
+}
+.social p {
+  margin-left: 5px;
+  font-size: 1.1rem;
+}
+.socialLogo {
+  font-size: 1.2rem;
+}
+.social :hover {
+  text-decoration: underline;
+}
+/* ----------------------lightmode */
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.sun {
+  background-color: #fbd38d;
+  padding: 8px 12px;
+  font-size: 1rem;
+  transition: 0.6s;
+  border-radius: 10%;
+}
+.sun:hover {
+  background-color: #fabf58;
+}
+.moon {
+  background-color: #805ad5;
+  padding: 8px 12px;
+  font-size: 1rem;
+  transition: 0.6s;
+  border-radius: 10%;
+}
+/* ----------------------menu */
+
+.menuBtn {
+  padding: 8px 12px;
+  border: 1px solid;
+  border-radius: 10%;
+  cursor: pointer;
+  margin-left: 1rem;
+  opacity: 0;
+}
+
+.menu {
   position: absolute;
-  right: 0;
-  display: n;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+  display: flex;
+  flex-direction: column;
+}
+.menu span {
+  border: 1px solid;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* --------------------media queries */
+@media (max-width: 780px) {
+  .links {
+    display: none;
+  }
+  .menuBtn {
+    opacity: 1;
+    margin-right: 4rem;
+  }
 }

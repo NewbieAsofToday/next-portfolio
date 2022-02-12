@@ -1,0 +1,20 @@
+.container {
+  width: 50vw;
+  margin: 0 auto;
+}
+.container .title {
+  font-size: 1.2rem;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cat1 {
+  height: 200px;
+  width: auto;
+}
+.cat2 {
+  height: 150px;
+  width: auto;
+}

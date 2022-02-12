@@ -1,28 +1,20 @@
 import React, { useState } from "react";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const Layout = ({ children }) => {
-  const [dark, setDark] = useState(false);
-  const darkMode = () => {
-    setDark(!dark);
-  };
+const Layout = ({ children, themeToggler }) => {
+  const [white, setWhite] = useState(false);
   return (
-    <body>
-      <Navbar darkMode={darkMode} />
-
+    <div className='container'>
+      <Navbar themeToggler={themeToggler} white={white} setWhite={setWhite} />
       {children}
-      <footer>
-        <h1>this is footer</h1>
-      </footer>
+      <Footer />
       <style jsx>{`
-        body {
-          background: ${dark ? "#fff" : "#000"};
-          color: ${dark ? "#000" : "#fff"};
-          width: 100%;
-          height: 100%;
+        .container {
+          color: ${white ? "#fff" : "#000"};
         }
       `}</style>
-    </body>
+    </div>
   );
 };
 
