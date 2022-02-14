@@ -4,11 +4,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 55vw;
+  width: 50%;
   margin: 0 auto;
-  max-width: 768px;
-  min-width: 300px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid;
 }
 /* ----------------------logo */
 
@@ -19,6 +20,11 @@
   margin-left: 1rem;
   font-size: 1.2rem;
   font-weight: 500;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.logo:hover {
+  transform: scale(1.1);
 }
 .logo p {
   min-width: 50px;
@@ -49,16 +55,17 @@
   flex: 1;
   cursor: pointer;
   margin-left: 1rem;
+  display: flex;
 }
 .social {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   transition: 0.4s;
-}
-.social p {
   margin-left: 5px;
-  font-size: 1.1rem;
+}
+.social:hover {
+  transform: translateY(-4px);
 }
 .socialLogo {
   font-size: 1.2rem;
@@ -126,5 +133,40 @@
   .menuBtn {
     opacity: 1;
     margin-right: 4rem;
+  }
+}
+/* -----------------------hand wave */
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
   }
 }

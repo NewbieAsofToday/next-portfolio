@@ -1,0 +1,9 @@
+.container {
+  width: 50vw;
+  margin: 0 auto;
+}
+.title {
+  font-size: 1.2rem;
+  border-bottom: 5px solid;
+  width: fit-content;
+}
