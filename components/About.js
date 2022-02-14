@@ -9,6 +9,7 @@ import { FaReact } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { DiGit } from "react-icons/di";
 import { motion } from "framer-motion";
+import Image from "next/image";
 const About = () => {
   return (
     <div id='#about' className={styles.container}>
@@ -19,7 +20,13 @@ const About = () => {
         transition={{ delay: 0.8 }}
         className={styles.hero}
       >
-        <img className={styles.cat1} src='./cat.gif' alt='' />
+        <Image
+          height={200}
+          width={150}
+          className={styles.cat1}
+          src='./cat.gif'
+          alt=''
+        />
       </motion.div>
 
       <motion.div
@@ -28,10 +35,10 @@ const About = () => {
         transition={{ delay: 0.1 }}
         className={styles.heroTitle}
       >
-        <div class={styles.heroText}>
-          <h1 class={(styles.text, styles.t1)}>
+        <div className={styles.heroText}>
+          <h1 className={(styles.text, styles.t1)}>
             Hello there, I am a
-            <span class={styles.textclass}> front-end developer.</span>
+            <span className={styles.textclass}> front-end developer.</span>
           </h1>
         </div>
       </motion.div>
