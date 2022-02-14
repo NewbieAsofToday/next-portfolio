@@ -22,9 +22,9 @@ const About = () => {
       >
         <Image
           height={200}
-          width={150}
+          width={200}
           className={styles.cat1}
-          src='./cat.gif'
+          src='/cat.gif'
           alt=''
         />
       </motion.div>
