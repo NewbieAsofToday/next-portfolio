@@ -47,7 +47,7 @@ const About = () => {
       {/* ================desc */}
       <p className={styles.desc}>
         I am Euger Bonete. I am passionate about coding and I am constantly
-        learning more about web development. I'm currently learning
+        learning more about web development. I&#39;m currently learning
         <strong> NextJS, strapi </strong>
         and some concepts like authentication and state management tools.
       </p>
