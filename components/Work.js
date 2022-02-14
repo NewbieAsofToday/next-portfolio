@@ -8,8 +8,8 @@ const Work = () => {
     <div id='works' className={styles.container}>
       <p className={styles.title}>See my work</p>
       <div>
-        {data.map((item) => {
-          return <ProjectCard item={item} />;
+        {data.map((item, index) => {
+          return <ProjectCard key={index} item={item} />;
         })}
       </div>
     </div>
